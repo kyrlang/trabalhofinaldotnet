@@ -1,0 +1,10 @@
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\bin\WCFTransmissorMensagens.dll.config
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\bin\WCFTransmissorMensagens.dll
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\bin\WCFTransmissorMensagens.pdb
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\bin\Newtonsoft.Json.dll
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\bin\Newtonsoft.Json.xml
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\obj\Debug\WCFTransmissorMensagem.csprojAssemblyReference.cache
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\obj\Debug\WCFTransmissorMensagem.csproj.CoreCompileInputs.cache
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\obj\Debug\WCFTransmissorMensagem.csproj.CopyComplete
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\obj\Debug\WCFTransmissorMensagens.dll
+K:\PUC\.Net\Net-TrabalhoFinal\WCFTransmissorMensagens\obj\Debug\WCFTransmissorMensagens.pdb
