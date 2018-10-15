@@ -1,0 +1,9 @@
+D:\Pós\trabalhofinaldotnet\WS\bin\WS.dll.config
+D:\Pós\trabalhofinaldotnet\WS\bin\WS.dll
+D:\Pós\trabalhofinaldotnet\WS\bin\WS.pdb
+D:\Pós\trabalhofinaldotnet\WS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Pós\trabalhofinaldotnet\WS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.csprojResolveAssemblyReference.cache
+D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.csproj.CoreCompileInputs.cache
+D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.dll
+D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.pdb
