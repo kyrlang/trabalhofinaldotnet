@@ -12,3 +12,13 @@ K:\PUC\.Net\Net-TrabalhoFinal\WCFReceptorMensagens\bin\EntityFramework.SqlServer
 K:\PUC\.Net\Net-TrabalhoFinal\WCFReceptorMensagens\bin\EntityFramework.xml
 K:\PUC\.Net\Net-TrabalhoFinal\WCFReceptorMensagens\bin\EntityFramework.SqlServer.xml
 K:\PUC\.Net\Net-TrabalhoFinal\WCFReceptorMensagens\obj\Debug\WCFReceptorMensagens.csprojAssemblyReference.cache
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\bin\WCFReceptorMensagens.dll.config
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\bin\WCFReceptorMensagens.dll
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\bin\WCFReceptorMensagens.pdb
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\bin\EntityFramework.xml
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\bin\EntityFramework.SqlServer.xml
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\bin\Newtonsoft.Json.xml
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\obj\Debug\WCFReceptorMensagens.csprojResolveAssemblyReference.cache
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\obj\Debug\WCFReceptorMensagens.csproj.CoreCompileInputs.cache
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\obj\Debug\WCFReceptorMensagens.dll
+D:\Pós\trabalhofinaldotnet\WCFReceptorMensagens\obj\Debug\WCFReceptorMensagens.pdb
