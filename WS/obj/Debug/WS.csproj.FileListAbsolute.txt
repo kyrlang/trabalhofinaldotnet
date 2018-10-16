@@ -7,3 +7,13 @@ D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.csprojResolveAssemblyReference.cache
 D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.csproj.CoreCompileInputs.cache
 D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.dll
 D:\Pós\trabalhofinaldotnet\WS\obj\Debug\WS.pdb
+K:\PUC\.Net\Net-TrabalhoFinal\WS\bin\WS.dll.config
+K:\PUC\.Net\Net-TrabalhoFinal\WS\bin\WS.dll
+K:\PUC\.Net\Net-TrabalhoFinal\WS\bin\WS.pdb
+K:\PUC\.Net\Net-TrabalhoFinal\WS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+K:\PUC\.Net\Net-TrabalhoFinal\WS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+K:\PUC\.Net\Net-TrabalhoFinal\WS\obj\Debug\WS.csprojAssemblyReference.cache
+K:\PUC\.Net\Net-TrabalhoFinal\WS\obj\Debug\WS.csproj.CoreCompileInputs.cache
+K:\PUC\.Net\Net-TrabalhoFinal\WS\obj\Debug\WS.csproj.CopyComplete
+K:\PUC\.Net\Net-TrabalhoFinal\WS\obj\Debug\WS.dll
+K:\PUC\.Net\Net-TrabalhoFinal\WS\obj\Debug\WS.pdb

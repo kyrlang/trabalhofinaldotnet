@@ -13,18 +13,17 @@ namespace WS
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-    // [System.Web.Script.Services.ScriptService]
     public class TransmissorMessagem : System.Web.Services.WebService
     {
 
-        [WebMethod()]
-        public bool TransmitirMensagem(Pacientes pacientes)
+        //após criar o WS (WebService) é necessário realizar adicionar a referência do WCF criado no projeto anterior para uso
+         [WebMethod()]
+        public bool TransmitirMensagem(Pacientes pacientes) //esse serviço espera como parametro um objeto do tipo Paciente referente ao objeto criado no WCF
         {
-            TransmissorMensagemClient client = new TransmissorMensagemClient();
+            TransmissorMensagemClient client = new TransmissorMensagemClient(); // essa classe é referencia do WCF, que pode ser visualizado na linha 6 (WS.WCF)
             try
             {
-                client.InserirMensagem(pacientes);
+                client.InserirMensagem(pacientes); //após instanciar uma nova classe client do WCF, os serviços ficam disponível para uso, nesse caso estamos usando o InserirMensagem
                 return true;
             }
             catch (Exception)
