@@ -6,6 +6,7 @@ using System.Web;
 
 namespace WCFTransmissorMensagens.Models
 {
+    [DataContract]
     public class Pacientes
     {
         [DataMember]

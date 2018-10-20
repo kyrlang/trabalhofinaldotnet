@@ -17,9 +17,8 @@ namespace WCFTransmissorMensagens
         [WebInvoke(Method = "POST",
             ResponseFormat = WebMessageFormat.Json,
             RequestFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.Bare,
-            UriTemplate = "mensagem")]
-        bool InserirMensagem(Pacientes pacientes);
+            UriTemplate = "/InserirMensagem")]
+        Pacientes InserirMensagem(Pacientes pacientes);
 
     }
 

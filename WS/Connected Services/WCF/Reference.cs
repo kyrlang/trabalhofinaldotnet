@@ -79,10 +79,10 @@ namespace WS.WCF {
     public interface ITransmissorMensagem {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransmissorMensagem/InserirMensagem", ReplyAction="http://tempuri.org/ITransmissorMensagem/InserirMensagemResponse")]
-        void InserirMensagem(WS.WCF.Pacientes pacientes);
+        bool InserirMensagem(WS.WCF.Pacientes pacientes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransmissorMensagem/InserirMensagem", ReplyAction="http://tempuri.org/ITransmissorMensagem/InserirMensagemResponse")]
-        System.Threading.Tasks.Task InserirMensagemAsync(WS.WCF.Pacientes pacientes);
+        System.Threading.Tasks.Task<bool> InserirMensagemAsync(WS.WCF.Pacientes pacientes);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -112,11 +112,11 @@ namespace WS.WCF {
                 base(binding, remoteAddress) {
         }
         
-        public void InserirMensagem(WS.WCF.Pacientes pacientes) {
-            base.Channel.InserirMensagem(pacientes);
+        public bool InserirMensagem(WS.WCF.Pacientes pacientes) {
+            return base.Channel.InserirMensagem(pacientes);
         }
         
-        public System.Threading.Tasks.Task InserirMensagemAsync(WS.WCF.Pacientes pacientes) {
+        public System.Threading.Tasks.Task<bool> InserirMensagemAsync(WS.WCF.Pacientes pacientes) {
             return base.Channel.InserirMensagemAsync(pacientes);
         }
     }

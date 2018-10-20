@@ -14,7 +14,7 @@ namespace WCFTransmissorMensagens
 {
     public class TransmissorMensagem : ITransmissorMensagem
     {
-        public bool InserirMensagem(Pacientes pacientes)
+        public Pacientes InserirMensagem(Pacientes pacientes)
         {
             try
             {
@@ -28,14 +28,14 @@ namespace WCFTransmissorMensagens
                     };
 
                     fila.Send(mensagem); //envia mensagem para fila
-                    return true;
+                    return pacientes;
                 }
                 else
-                    return false;
+                    return null;
             }
             catch (Exception ex)
             {
-                return false;
+                return null;
             }
         }
     }
