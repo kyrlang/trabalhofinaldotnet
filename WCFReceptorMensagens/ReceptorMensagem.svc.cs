@@ -9,6 +9,7 @@ using System.ServiceModel;
 using System.ServiceModel.Dispatcher;
 using System.ServiceModel.Web;
 using System.Text;
+using WCFReceptorMensagens.Model;
 
 namespace WCFReceptorMensagens
 {
@@ -25,7 +26,13 @@ namespace WCFReceptorMensagens
                     foreach (var item in mensagens) //pecorrer a lita de mensagens para pegar o conteúdo de cada uma
                     {
                         var conteudoMensagem = JsonConvert.DeserializeObject(item.Body.ToString()); // obtem o conteúdo da mensagem para inserir no banco
+                        Paciente paciente = JsonConvert.DeserializeObject<Paciente>(item.Body.ToString());
                         // Gravar no banco
+                        using (var context = new Context())
+                        {
+                            context.Paciente.Add(paciente);
+                            context.SaveChanges();
+                        }
                     }
 
                     fila.Purge(); // exclui a lista de mensagem
