@@ -1,0 +1,7 @@
+K:\PUC\.Net\Net-TrabalhoFinal\WCF.MSMQ\obj\Debug\WCF.MSMQ.csprojAssemblyReference.cache
+K:\PUC\.Net\Net-TrabalhoFinal\WCF.MSMQ\obj\Debug\WCF.MSMQ.csproj.CoreCompileInputs.cache
+K:\PUC\.Net\Net-TrabalhoFinal\WCF.MSMQ\bin\Debug\WCF.MSMQ.exe.config
+K:\PUC\.Net\Net-TrabalhoFinal\WCF.MSMQ\bin\Debug\WCF.MSMQ.exe
+K:\PUC\.Net\Net-TrabalhoFinal\WCF.MSMQ\bin\Debug\WCF.MSMQ.pdb
+K:\PUC\.Net\Net-TrabalhoFinal\WCF.MSMQ\obj\Debug\WCF.MSMQ.exe
+K:\PUC\.Net\Net-TrabalhoFinal\WCF.MSMQ\obj\Debug\WCF.MSMQ.pdb
