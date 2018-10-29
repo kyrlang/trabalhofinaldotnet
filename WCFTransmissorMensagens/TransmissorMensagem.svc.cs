@@ -1,13 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Messaging;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 using WCFTransmissorMensagens.Models;
 
 namespace WCFTransmissorMensagens
@@ -20,7 +14,7 @@ namespace WCFTransmissorMensagens
             {
                 if (MessageQueue.Exists(ConfigurationManager.AppSettings["nomeFila"])) //verifica se a fila existe
                 {
-                    var fila = new MessageQueue(ConfigurationManager.AppSettings["caminhoFila"]); //obtem o caminho da fila para criar objeto
+                    var fila = new MessageQueue(ConfigurationManager.AppSettings["nomeFila"]); //obtem o caminho da fila para criar objeto
                     var mensagem = new Message // preenche a mensagem a ser enviada para fila
                     {
                         Formatter = new XmlMessageFormatter(new Type[] { typeof(String) }),
@@ -31,11 +25,13 @@ namespace WCFTransmissorMensagens
                     return pacientes;
                 }
                 else
-                    return null;
+                {
+                    throw new Exception(string.Format("Não foi encontrada uma fila com o nome {0}", ConfigurationManager.AppSettings["nomeFila"]));
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return null;
+                throw;
             }
         }
     }
