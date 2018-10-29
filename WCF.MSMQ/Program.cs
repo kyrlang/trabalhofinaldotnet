@@ -36,7 +36,7 @@ namespace WCF.MSMQ
 
         private static void Faulted(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Problema no WCF");
         }
     }
 }

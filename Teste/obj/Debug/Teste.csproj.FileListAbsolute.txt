@@ -1,0 +1,2 @@
+K:\PUC\.Net\Net-TrabalhoFinal\Teste\obj\Debug\Teste.csprojAssemblyReference.cache
+K:\PUC\.Net\Net-TrabalhoFinal\Teste\obj\Debug\Teste.csproj.CoreCompileInputs.cache

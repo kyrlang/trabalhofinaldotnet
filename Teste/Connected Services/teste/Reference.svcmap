@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="944ab9c4-4899-4091-81c7-8f6564025516" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64286/TransmissorMensagem.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TransmissorMensagem.xsd" MetadataType="Schema" ID="9bfdd3db-ef62-46d9-8a45-b55b19483446" SourceId="1" SourceUrl="http://localhost:64286/TransmissorMensagem.svc?xsd=xsd1" />
+    <MetadataFile FileName="TransmissorMensagem1.xsd" MetadataType="Schema" ID="6d9a9ae0-c28b-4c58-a795-9e283d79fab8" SourceId="1" SourceUrl="http://localhost:64286/TransmissorMensagem.svc?xsd=xsd2" />
+    <MetadataFile FileName="TransmissorMensagem2.xsd" MetadataType="Schema" ID="fd2fa5dd-e28b-42c5-a09e-257464fa3d21" SourceId="1" SourceUrl="http://localhost:64286/TransmissorMensagem.svc?xsd=xsd0" />
+    <MetadataFile FileName="TransmissorMensagem.disco" MetadataType="Disco" ID="207d8f82-78d8-46df-906c-c4941888cafc" SourceId="1" SourceUrl="http://localhost:64286/TransmissorMensagem.svc?disco" />
+    <MetadataFile FileName="TransmissorMensagem.wsdl" MetadataType="Wsdl" ID="4759a35c-a6d1-4073-910a-ce4b7a0be460" SourceId="1" SourceUrl="http://localhost:64286/TransmissorMensagem.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
