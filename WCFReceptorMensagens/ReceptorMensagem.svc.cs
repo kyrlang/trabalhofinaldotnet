@@ -1,14 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Messaging;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Dispatcher;
-using System.ServiceModel.Web;
-using System.Text;
 using WCFReceptorMensagens.Model;
 
 namespace WCFReceptorMensagens

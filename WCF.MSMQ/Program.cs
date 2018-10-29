@@ -20,7 +20,7 @@ namespace WCF.MSMQ
                 Console.WriteLine("Serviço iniciado ...");
 
                 //Se apertar qualquer tecla vai sair do console
-                Console.ReadLine();
+                Console.ReadKey();
 
                 if (host != null)
                 {
