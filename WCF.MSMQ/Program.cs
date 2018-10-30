@@ -14,12 +14,10 @@ namespace WCF.MSMQ
 
         static void Main(string[] args)
         {
-            MessageQueue myQueue = new MessageQueue(ConfigurationManager.AppSettings["nomeFila"]);
-            myQueue.Formatter = new XmlMessageFormatter(new Type[]
-                {typeof(String)});
+            MessageQueue myQueue = new MessageQueue(ConfigurationManager.AppSettings["nomeFila"]); // de posse do nome da fila ele cria uma nova instancia dessa fila
+            myQueue.Formatter = new XmlMessageFormatter(new Type[] {typeof(String)}); // define o formato
 
-            myQueue.ReceiveCompleted +=
-                new ReceiveCompletedEventHandler(MyReceiveCompleted);
+            myQueue.ReceiveCompleted += new ReceiveCompletedEventHandler(MyReceiveCompleted); // cria o evento  ReceiveCompleted que será chamado 
 
             myQueue.BeginReceive();
 
@@ -29,23 +27,23 @@ namespace WCF.MSMQ
 
         }
 
-        private static void MyReceiveCompleted(Object source,
-            ReceiveCompletedEventArgs asyncResult)
+        private static void MyReceiveCompleted(Object source, ReceiveCompletedEventArgs asyncResult)
         {
             try
             {
-                MessageQueue mq = (MessageQueue)source;
+                MessageQueue mq = (MessageQueue)source; //converte o objeto source para o tipo MessageQueue
 
-                Message message = mq.EndReceive(asyncResult.AsyncResult);
+                Message message = mq.EndReceive(asyncResult.AsyncResult); // obtem a mensagem
 
-                Console.WriteLine(message.Body.ToString());
+                Console.WriteLine(message.Body.ToString()); // escreve a mensagem no console
 
-                var paciente = JsonConvert.DeserializeObject<Paciente>(message.Body.ToString());
+                var paciente = JsonConvert.DeserializeObject<Paciente>(message.Body.ToString()); //deserializa a mensagem de acordo com o model, nesse caso Paciente
 
-                using (var context = new Context())
+                //instancia a classe Context para ter acesso as rotinas de banco
+                using (var context = new Context()) 
                 {
-                    context.Paciente.Add(paciente);
-                    context.SaveChanges();
+                    context.Paciente.Add(paciente); // insere o objeto paciente na tabela Paciente
+                    context.SaveChanges(); //o objeto só é adicionado de fato após realizar a execução dessa linha, se não, não é inserido no banco
                 }
 
                 count += 1;
