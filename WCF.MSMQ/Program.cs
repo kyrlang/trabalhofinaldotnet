@@ -17,9 +17,9 @@ namespace WCF.MSMQ
             MessageQueue myQueue = new MessageQueue(ConfigurationManager.AppSettings["nomeFila"]); // de posse do nome da fila ele cria uma nova instancia dessa fila
             myQueue.Formatter = new XmlMessageFormatter(new Type[] {typeof(String)}); // define o formato
 
-            myQueue.ReceiveCompleted += new ReceiveCompletedEventHandler(MyReceiveCompleted); // cria o evento  ReceiveCompleted que será chamado 
+            myQueue.ReceiveCompleted += new ReceiveCompletedEventHandler(MyReceiveCompleted); // cria o evento  ReceiveCompleted que será chamado quando uma mensagem é removida da fila, que vai executar nesse caso o método abaixo
 
-            myQueue.BeginReceive();
+            myQueue.BeginReceive(); // 
 
             signal.WaitOne();
 
