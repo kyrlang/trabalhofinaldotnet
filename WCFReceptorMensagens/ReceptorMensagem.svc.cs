@@ -13,7 +13,7 @@ namespace WCFReceptorMensagens
         {
             if (MessageQueue.Exists(ConfigurationManager.AppSettings["nomeFila"])) //verifica se a fila existe
             {
-                using (var fila = new MessageQueue(ConfigurationManager.AppSettings["caminhoFila"])) //pega o caminho da fila através de seu nome configurado no web.config nesse caso de nome "fila" 
+                using (var fila = new MessageQueue(ConfigurationManager.AppSettings["nomeFila"])) //pega o caminho da fila através de seu nome configurado no web.config nesse caso de nome "fila" 
                 {
                     fila.Formatter = new XmlMessageFormatter(new Type[] { typeof(String) }); //formata a fila pra receber a mensagem em forma de JSON
                     var mensagens = fila.GetAllMessages().ToList(); //pega todas as mensagens na fila

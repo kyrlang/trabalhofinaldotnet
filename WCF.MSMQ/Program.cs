@@ -1,42 +1,72 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+using System;
+using System.Configuration;
+using System.Messaging;
+using System.Threading;
+using WCF.MSMQ.Model;
 
 namespace WCF.MSMQ
 {
     class Program
     {
+        static ManualResetEvent signal = new ManualResetEvent(false);
+        static int count = 0;
+
         static void Main(string[] args)
         {
+            MessageQueue myQueue = new MessageQueue(ConfigurationManager.AppSettings["nomeFila"]);
+            myQueue.Formatter = new XmlMessageFormatter(new Type[]
+                {typeof(String)});
 
-            using (var host = new ServiceHost(typeof(ReceptorMensagem)))
-            {
-                host.Faulted += Faulted;
-                host.Open();
+            myQueue.ReceiveCompleted +=
+                new ReceiveCompletedEventHandler(MyReceiveCompleted);
 
-                Console.WriteLine("Serviço iniciado ...");
+            myQueue.BeginReceive();
 
-                //Se apertar qualquer tecla vai sair do console
-                Console.ReadKey();
+            signal.WaitOne();
 
-                if (host != null)
-                {
-                    if (host.State == CommunicationState.Faulted)
-                    {
-                        host.Abort();
-                    }
-                    host.Close();
-                }
-            }
+            return;
 
         }
 
-        private static void Faulted(object sender, EventArgs e)
+        private static void MyReceiveCompleted(Object source,
+            ReceiveCompletedEventArgs asyncResult)
         {
-            Console.WriteLine("Problema no WCF");
+            try
+            {
+                MessageQueue mq = (MessageQueue)source;
+
+                Message message = mq.EndReceive(asyncResult.AsyncResult);
+
+                Console.WriteLine(message.Body.ToString());
+
+                var paciente = JsonConvert.DeserializeObject<Paciente>(message.Body.ToString());
+
+                using (var context = new Context())
+                {
+                    context.Paciente.Add(paciente);
+                    context.SaveChanges();
+                }
+
+                count += 1;
+
+                if (count == 100)
+                {
+                    signal.Set();
+                }
+
+                mq.BeginReceive();
+            }
+            catch (MessageQueueException ex)
+            {
+                Console.WriteLine(string.Format("Erro: {0} \n Stacktrace: {1}", ex.Message, ex.StackTrace));
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(string.Format("Erro: {0} \n Stacktrace: {1}", ex.Message, ex.StackTrace));
+            }
+
+            return;
         }
     }
 }

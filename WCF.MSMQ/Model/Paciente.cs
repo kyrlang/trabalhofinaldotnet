@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WCF.MSMQ.Model
 {
-    [DataContract]
+    [Table("Pacientes")]
     public class Paciente
     {
-
-        [DataMember]
+        [Key]
         public Guid IdPaciente { get; set; }
-        [DataMember]
         public string NomePaciente { get; set; }
 
     }
